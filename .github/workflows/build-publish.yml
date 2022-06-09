@@ -48,7 +48,7 @@ jobs:
         ( test $BRANCH = "stable" || test $BRANCH = "master" && export PRERELEASE=false ) || export PRERELEASE=true
         echo "PRERELEASE=$PRERELEASE" >> $GITHUB_ENV
         bash ./scripts/build_and_publish.sh
-    
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
